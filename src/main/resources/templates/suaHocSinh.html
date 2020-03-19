@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:object="${hocSinh}" th:action="@{save}" action="#" method="post">  
+        <input type="hidden" th:field="*{id}">  
+        <div>  
+            <label th:text="ten" th:for="ten"></label>  
+            <input type="text" th:field="*{ten}" class="form-control"/>  
+        </div>  
+        <div style="clear: both; display: block; height: 10px"></div>  
+        <div>  
+            <label th:text="soDienThoai" th:for="soDienThoai"></label>  
+            <input type="text" th:field="*{soDienThoai}" class="form-control"/>  
+        </div>  
+        <div style="clear: both; display: block; height: 10px"></div>  
+        <div>  
+            <label th:text="ngaySinh" th:for="ngaySinh"></label>  
+            <input type="text" th:field="*{ngaySinh}" class="form-control"/>  
+        </div>  
+        <div>  
+            <label th:text="diaChi" th:for="diaChi"></label>  
+            <input type="text" th:field="*{diaChi}" class="form-control"/>  
+        </div>
+        <div style="clear: both; display: block; height: 10px"></div>  
+        <input type="submit" class="btn btn-success" value="Lưu"/>  
+    </form> 
+</body>
+</html>

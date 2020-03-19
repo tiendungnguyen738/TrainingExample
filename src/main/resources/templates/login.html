@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+</head>
+<body>
+	<div class="main-content">
+	        <p th:if="${param.error}" class="error">Mật khẩu hoặc Tên đăng nhập không tồn tại</p>
+	        <p th:if="${param.logout}" class="success">Bạn vừa đăng xuất</p>
+	        <h3>Login to continue</h3>
+	        <form th:action="@{/login}" method="POST">
+	            <input type="text" name="userName" placeholder="Nhập tên người dùng" /><br />
+	            <input type="password" name="password" placeholder="Nhập mật khẩu" /><br />
+	            <button type="submit">Đăng Nhập</button> <br />
+	        </form>
+    </div>
+</body>
+</html>
